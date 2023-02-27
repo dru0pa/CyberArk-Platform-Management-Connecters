@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Device Name="Website"><Policies><Policy AutoChangeOnAdd="No" AutoVerifyOnAdd="No" ID="Webmin" PlatformBaseID="GenericWebApp" PlatformBaseProtocol="Https" PlatformBaseType="Website">
+          <PrivilegedSessionManagement ID="PSM-PSM-01" />
+          <Properties>
+            <Required>
+              <Property Name="Username" />
+              <Property Name="Address" />
+            </Required>
+            <Optional />
+          </Properties>
+          <LinkedPasswords>
+            <Link Name="ReconcileAccount" PropertyIndex="3" />
+          </LinkedPasswords>
+          <TicketingSystem EnterTicketingInfo="No" ValidateTicketNumber="No" />
+          <ConnectionComponents>
+            <ConnectionComponent Id="PSM-Webmin" Enable="Yes" />
+          </ConnectionComponents>
+        </Policy></Policies></Device>

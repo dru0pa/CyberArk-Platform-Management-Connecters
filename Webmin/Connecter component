@@ -1,0 +1,7 @@
+LogonURL: https://{address}:10000
+
+WebformFiels
+user>{Username}(searchby=name)
+pass>{Password}(searchby=name)
+button.btn.btn-primary>(Button)(searchby=css)
+btn-menu-toggler>(Validation)(searchby=class)

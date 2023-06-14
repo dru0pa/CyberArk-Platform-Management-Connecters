@@ -1,0 +1,19 @@
+<ConnectionComponent Id="PSM-Pop-Up" Type="CyberArk.PasswordVault.TransparentConnection.PSM.PSMConnectionComponent, CyberArk.PasswordVault.TransparentConnection.PSM">
+   <ComponentParameters />
+   <UserParameters>
+    <Parameter EnforceInDualControlRequest="No" Name="AllowMappingLocalDrives" Required="Yes" Type="CyberArk.TransparentConnection.BooleanUserParameter, CyberArk.PasswordVault.TransparentConnection" Value="No" Visible="No" />
+   </UserParameters>
+   <TargetSettings ClientApp="&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot; http://{UserName}:{Password}@{Address}" ClientDispatcher="NA" ClientInvokeType="CommandLine" Protocol="HTTP">
+    <ClientSpecific>
+     <Parameter Name="WaitBeforeCmdlineParmsHide" Value="2000" />
+     <Parameter Name="CmdLineParmsHideTimeout" Value="2000" />
+     <Parameter Name="EnableTrace" Value="Yes" />
+    </ClientSpecific>
+    <LockAppWindow Enable="No" MainWindowClass="Chrome_WidgetWin_1" SearchWindowWaitTimeout="30" Timeout="2000" />
+    <WebFormSettings FormName="login" LogonURL="http://{Address}" SubmitButton="Login" WebFormFields="un&gt;{Username}&#xA;username&gt;{Username}&#xA;pw&gt;{Password}&#xA;width&gt;1024&#xA;height&gt;768" EnforceCertificateValidation="No" />
+    <Capabilities>
+     <Capability Id="WindowsEventsAudit" />
+     <Capability Id="WindowsEventsTextRecorder" />
+    </Capabilities>
+   </TargetSettings>
+  </ConnectionComponent>
